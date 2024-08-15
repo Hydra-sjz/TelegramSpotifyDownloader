@@ -17,9 +17,9 @@ def update_config():
         json.dump(config, write_file)
 
 try:
-    token = dotenv_values(".env")["TELEGRAM_TOKEN"]
+    token = dotenv_values(".env")["BOT_TOKEN"]
 except:
-    token = os.environ['TELEGRAM_TOKEN']
+    token = os.environ['BOT_TOKEN']
 
 updater = Updater(token)
 dispatcher = updater.dispatcher
